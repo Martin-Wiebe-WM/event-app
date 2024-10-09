@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Team-Events und Firmenveranstaltungen</title>
+</head>
+
+<body>
+
+    <body class="bg-gray-100 font-sans">
+        <div class="container mx-auto p-6">
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">Willkommen zur Event-Planung</h1>
+            <p class="text-lg text-gray-700 mb-6">Hier können Sie sich zu kommenden Team-Events und
+                Firmenveranstaltungen anmelden.</p>
+
+            <!-- Event 1 -->
+            <div class="bg-white p-6 mb-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2">Jahresabschlussfeier</h2>
+                <p class="text-gray-700">Datum: 15. Dezember 2023</p>
+                <p class="text-gray-700">Ort: Firmenzentrale</p>
+                <button class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 mt-4"
+                    onclick="register('Jahresabschlussfeier')">Jetzt anmelden</button>
+                <p class="text-red-500 text-sm mt-2" id="Jahresabschlussfeier-notification"></p>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="bg-white p-6 mb-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2">Team-Building-Wochenende</h2>
+                <p class="text-gray-700">Datum: 20. Januar 2024</p>
+                <p class="text-gray-700">Ort: Bergresort</p>
+                <button class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 mt-4"
+                    onclick="register('Team-Building-Wochenende')">Jetzt anmelden</button>
+                <p class="text-red-500 text-sm mt-2" id="Team-Building-Wochenende-notification"></p>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="bg-white p-6 mb-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-2">Sommerfest</h2>
+                <p class="text-gray-700">Datum: 18. Juni 2024</p>
+                <p class="text-gray-700">Ort: Firmenpark</p>
+                <button class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 mt-4"
+                    onclick="register('Sommerfest')">Jetzt anmelden</button>
+                <p class="text-red-500 text-sm mt-2" id="Sommerfest-notification"></p>
+            </div>
+        </div>
+
+        <script>
+            function register(event) {
+                const notification = document.getElementById(`${event}-notification`);
+                notification.textContent = `Sie haben sich erfolgreich für ${event} angemeldet.`;
+            }
+        </script>
+    </body>
+
+</html>
